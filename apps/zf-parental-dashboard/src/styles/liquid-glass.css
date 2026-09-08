@@ -1,0 +1,218 @@
+/* ==========================================================================
+   Zentry DNA: Liquid Glass Physics & Optical Tokens (Light & Dark)
+   ========================================================================== */
+
+:root {
+  /* Canonical Zentry Palette Constants */
+  --zentry-purpura: #533B87;
+  --zentry-lavanda: #D6C8FA;
+  --zentry-menta: #C2F4E7;
+  --zentry-glacial: #EBF1F5;
+  --zentry-slate: #4A5160;
+  --zentry-dark: #080D1A;
+  --zentry-amber: #FBBF24;
+  --zentry-coral: #F87171;
+  --zentry-cyan: #38BDF8;
+
+  /* Native Linear Spring Curves */
+  --spring-tactil: linear(
+    0, 0.0092 1.5%, 0.0355 3%, 0.1435 6.3%, 0.4088 12.1%, 0.5361 14.8%,
+    0.6484 17.5%, 0.7439 20.2%, 0.8232 23%, 0.8869 25.9%, 0.9363 29%,
+    0.9726 32.4%, 0.9977 36.4%, 1.0117 40.4%, 1.0163 44.6%, 1.0139 50.1%,
+    1.0055 60.3%, 0.9998 74.2%, 1
+  );
+  --spring-contenedor: linear(
+    0, 0.0064 2.2%, 0.0248 4.4%, 0.1006 9.2%, 0.2862 17.7%, 0.3752 21.6%,
+    0.4538 25.6%, 0.5776 33.4%, 0.6686 41%, 0.7818 53%, 0.8862 67.8%,
+    0.9481 80.2%, 0.9808 91%, 0.9948 98.4%, 1
+  );
+  --spring-lever: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-tactil: 320ms;
+  --dur-contenedor: 480ms;
+}
+
+/* Light Theme Variables (DEFAULT Zentry Version - Light Aurora) */
+:root, .theme-light, [data-theme="light"], :root:not(.dark) {
+  --bg-canvas: #F8F6FE;
+  --bg-canvas-gradient: 
+    radial-gradient(circle at 15% 10%, rgba(214, 200, 250, 0.45) 0%, transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(194, 244, 231, 0.35) 0%, transparent 35%),
+    radial-gradient(circle at 50% 90%, rgba(0, 242, 254, 0.12) 0%, transparent 45%),
+    linear-gradient(180deg, #FFFFFF 0%, #F5F1FD 100%);
+  --bg-base: #F8F6FE;
+  --bg-ambient: var(--bg-canvas-gradient);
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --border-glass: rgba(83, 59, 135, 0.12);
+  --border-glass-hover: rgba(83, 59, 135, 0.25);
+  --border-glow: rgba(0, 242, 254, 0.45);
+  --shadow-card: 0 8px 30px rgba(83, 59, 135, 0.08);
+
+  --text-main: #1E1633;
+  --text-muted: #5E6475;
+  --text-faint: #8F95A3;
+  
+  --glass-panel-bg: rgba(255, 255, 255, 0.88);
+  --glass-panel-border: rgba(83, 59, 135, 0.14);
+  --glass-panel-shadow: 0 10px 30px -5px rgba(83, 59, 135, 0.08), 0 4px 12px -2px rgba(83, 59, 135, 0.04), inset 0 1px 0 0 rgba(255, 255, 255, 0.95);
+  
+  --glass-card-bg: rgba(255, 255, 255, 0.92);
+  --glass-card-border: rgba(83, 59, 135, 0.12);
+  --glass-card-shadow: 0 6px 20px -3px rgba(83, 59, 135, 0.06), inset 0 1px 0 0 rgba(255, 255, 255, 0.95);
+  
+  --glass-pill-bg: rgba(242, 238, 253, 0.90);
+  --glass-pill-border: rgba(214, 200, 250, 0.75);
+  --glass-pill-text: #533B87;
+
+  --glass-input-bg: #FFFFFF;
+  --glass-input-border: rgba(83, 59, 135, 0.20);
+  --glass-input-text: #1E1633;
+  --glass-input-placeholder: #8F95A3;
+}
+
+/* Dark Theme Variables (Obsidian Liquid Glass - Dark Aurora) */
+:root.dark, .theme-dark, [data-theme="dark"], .dark {
+  --bg-canvas: #0A0813;
+  --bg-canvas-gradient: 
+    radial-gradient(circle at 10% 15%, rgba(83, 59, 135, 0.35) 0%, transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(0, 242, 254, 0.15) 0%, transparent 35%),
+    radial-gradient(circle at 50% 80%, rgba(83, 59, 135, 0.25) 0%, transparent 50%),
+    linear-gradient(180deg, #090710 0%, #110D20 100%);
+  --bg-base: #080D1A;
+  --bg-ambient: var(--bg-canvas-gradient);
+  --bg-card: rgba(22, 17, 43, 0.75);
+  --bg-card-hover: rgba(36, 28, 68, 0.85);
+  --border-glass: rgba(214, 200, 250, 0.12);
+  --border-glass-hover: rgba(214, 200, 250, 0.30);
+  --border-glow: rgba(0, 242, 254, 0.35);
+  --shadow-card: 0 10px 35px rgba(0, 0, 0, 0.45);
+
+  --text-main: #FFFFFF;
+  --text-muted: #A1A7B8;
+  --text-faint: #6D7588;
+  
+  --glass-panel-bg: rgba(13, 19, 36, 0.80);
+  --glass-panel-border: rgba(214, 200, 250, 0.18);
+  --glass-panel-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 4px 16px rgba(83, 59, 135, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  
+  --glass-card-bg: rgba(19, 27, 48, 0.75);
+  --glass-card-border: rgba(214, 200, 250, 0.14);
+  --glass-card-shadow: 0 10px 30px rgba(0, 0, 0, 0.40);
+  
+  --glass-pill-bg: rgba(83, 59, 135, 0.35);
+  --glass-pill-border: rgba(214, 200, 250, 0.25);
+  --glass-pill-text: #D6C8FA;
+
+  --glass-input-bg: rgba(8, 13, 26, 0.85);
+  --glass-input-border: rgba(214, 200, 250, 0.20);
+  --glass-input-text: #FFFFFF;
+  --glass-input-placeholder: #64748B;
+}
+
+/* Top Glow Bar (Mesa de Trabajo 02.B) */
+.top-glow-bar {
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #533B87, #00F2FE, #D6C8FA, #C2F4E7);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
+  position: relative;
+  z-index: 50;
+}
+
+/* Glass Panels with Theme Support */
+.glass-panel {
+  background: var(--glass-panel-bg);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--glass-panel-border);
+  box-shadow: var(--glass-panel-shadow);
+  transition: all var(--dur-tactil) var(--spring-tactil);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(214, 200, 250, 0.50);
+  transform: translateY(-2px);
+}
+
+.glass-card {
+  background: var(--glass-card-bg);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid var(--glass-card-border);
+  box-shadow: var(--glass-card-shadow);
+}
+
+.glass-pill {
+  background: var(--glass-pill-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-pill-border);
+  color: var(--glass-pill-text);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+}
+
+.glass-input {
+  background: var(--glass-input-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-input-border);
+  color: var(--glass-input-text);
+}
+
+.glass-input::placeholder {
+  color: var(--glass-input-placeholder);
+}
+
+.glass-input:focus {
+  border-color: #533B87;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(214, 200, 250, 0.4);
+}
+
+.glass-panel-accent {
+  background: rgba(83, 59, 135, 0.12);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(194, 244, 231, 0.6);
+  box-shadow: 0 16px 40px rgba(83, 59, 135, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.glass-panel-alert {
+  background: rgba(248, 113, 113, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(248, 113, 113, 0.40);
+  box-shadow: 0 16px 40px rgba(248, 113, 113, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.70);
+}
+
+/* Circadian Warmth Filter Layer */
+#zentry-calidez-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: #FFB870;
+  mix-blend-mode: multiply;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  z-index: 9999;
+}
+
+#zentry-calidez-overlay.active {
+  opacity: 0.75;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(235, 241, 245, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: #ABB1B9;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8A919C;
+}

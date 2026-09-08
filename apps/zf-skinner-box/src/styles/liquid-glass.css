@@ -1,0 +1,129 @@
+/* Zentry Liquid Glass Optics & Behavioral Feedback Styling (Light & Dark) */
+
+:root {
+  --zentry-purpura: #533B87;
+  --zentry-lavanda: #D6C8FA;
+  --zentry-menta: #C2F4E7;
+  --zentry-glacial: #EBF1F5;
+  --zentry-slate: #4A5160;
+  --zentry-dark: #080D1A;
+}
+
+/* Light Theme (DEFAULT Zentry Version) */
+.theme-light, :root:not(.dark) {
+  --bg-base: #FBFCFD;
+  --bg-stage: #F8FAFC;
+  --bg-ambient: radial-gradient(at 0% 0%, hsl(214 100% 97% / 0.90) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, hsl(258 90% 96% / 0.90) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, hsl(165 75% 94% / 0.70) 0px, transparent 50%);
+  --text-main: #242730;
+  --text-muted: #4A5160;
+  
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(214, 200, 250, 0.75);
+  --glass-shadow: 0 10px 30px -5px rgba(83, 59, 135, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --card-border: rgba(214, 200, 250, 0.65);
+  --card-shadow: 0 16px 40px -8px rgba(83, 59, 135, 0.10), inset 0 1px 1px rgba(255, 255, 255, 0.95);
+  
+  --pill-bg: rgba(242, 238, 253, 0.90);
+  --pill-border: rgba(214, 200, 250, 0.80);
+  --pill-text: #533B87;
+}
+
+/* Dark Theme (Obsidian Liquid Glass) */
+.theme-dark, :root.dark {
+  --bg-base: #080D1A;
+  --bg-stage: #080D1A;
+  --bg-ambient: radial-gradient(at 0% 0%, rgba(83, 59, 135, 0.25) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(194, 244, 231, 0.12) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(214, 200, 250, 0.15) 0px, transparent 50%);
+  --text-main: #EBF1F5;
+  --text-muted: #CBD1D7;
+  
+  --glass-bg: rgba(8, 13, 26, 0.78);
+  --glass-border: rgba(214, 200, 250, 0.22);
+  --glass-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.2), 0 12px 40px 0 rgba(8, 13, 26, 0.8);
+  
+  --card-bg: rgba(15, 22, 41, 0.82);
+  --card-border: rgba(214, 200, 250, 0.28);
+  --card-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.25), 0 20px 50px 0 rgba(8, 13, 26, 0.9);
+  
+  --pill-bg: rgba(83, 59, 135, 0.35);
+  --pill-border: rgba(214, 200, 250, 0.30);
+  --pill-text: #D6C8FA;
+}
+
+@keyframes jackpotGlow {
+  0% {
+    box-shadow: 0 0 25px rgba(251, 191, 36, 0.4), inset 0 0 15px rgba(214, 200, 250, 0.3);
+    border-color: rgba(251, 191, 36, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 50px rgba(194, 244, 231, 0.8), inset 0 0 30px rgba(251, 191, 36, 0.6);
+    border-color: rgba(194, 244, 231, 0.95);
+  }
+}
+
+@keyframes leverPulse {
+  0% { transform: scale(0.97); opacity: 0.8; }
+  50% { transform: scale(1.03); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes dopamineFlash {
+  0% { opacity: 0; }
+  30% { opacity: 0.35; }
+  100% { opacity: 0; }
+}
+
+.zentry-liquid-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.25s ease;
+}
+
+.zentry-liquid-glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: all 0.25s ease;
+}
+
+.zentry-liquid-glass-pill {
+  background: var(--pill-bg);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid var(--pill-border);
+  color: var(--pill-text);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.zentry-jackpot-shimmer {
+  background: linear-gradient(135deg, rgba(83, 59, 135, 0.85), rgba(251, 191, 36, 0.35), rgba(194, 244, 231, 0.45));
+  border: 2px solid rgba(251, 191, 36, 0.85);
+  animation: jackpotGlow 2s ease-in-out infinite alternate;
+}
+
+.zentry-dopamine-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center, rgba(194, 244, 231, 0.3) 0%, rgba(214, 200, 250, 0.2) 40%, transparent 70%);
+  animation: dopamineFlash 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hide scrollbars completely while maintaining scroll functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

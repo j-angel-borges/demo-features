@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "catalog_version": "1.0.0",
+  "generated_at": "2026-09-06T12:12:00Z",
+  "project": "Zentry Commercial Demo Suite",
+  "target_modules": [
+    "apps/skinner-box",
+    "apps/parent-dashboard",
+    "packages/shared"
+  ],
+  "vectors": [
+    {
+      "id": "VEC-01",
+      "name": "Operant Conditioning & Slot Machine Neurobiology",
+      "file": "01_OPERANT_CONDITIONING_SLOT_MACHINE_NEUROBIOLOGY.md",
+      "core_concepts": [
+        "Skinner Box",
+        "Variable-Ratio Schedule (VR-7)",
+        "Reward Prediction Error (RPE)",
+        "Ventral Tegmental Area (VTA)",
+        "Phasic vs Tonic Dopamine",
+        "Slot Machine Hook Model"
+      ],
+      "primary_papers": [
+        {
+          "authors": "Schultz, W.",
+          "year": 2024,
+          "title": "A dopamine mechanism for reward maximization",
+          "journal": "Proc Natl Acad Sci U S A",
+          "doi": "10.1073/pnas.2316658121",
+          "pmid": "38717856"
+        },
+        {
+          "authors": "Su, C., Zhou, H., Gong, L., et al.",
+          "year": 2021,
+          "title": "Viewing personalized video clips recommended by TikTok activates default mode network and ventral tegmental area",
+          "journal": "NeuroImage",
+          "doi": "10.1016/j.neuroimage.2021.118136",
+          "pmid": "33932549"
+        },
+        {
+          "authors": "He, S., Tang, S., Liu, D.",
+          "year": 2026,
+          "title": "Association between usage intensity of short video platforms and altered brain function: a resting-state functional magnetic resonance imaging study",
+          "journal": "Front Hum Neurosci",
+          "doi": "10.3389/fnhum.2026.1786568",
+          "pmid": "42253790"
+        }
+      ]
+    },
+    {
+      "id": "VEC-02",
+      "name": "Attention Span Decay & Cognitive Fragmentation",
+      "file": "02_ATTENTION_DECAY_AND_COGNITIVE_FRAGMENTATION.md",
+      "core_concepts": [
+        "Temporal Decay Curve (40s -> 5s)",
+        "Doomscrolling Metrics",
+        "Dwell Time Thresholds (<6s skip vs >25s focus)",
+        "Executive Function Impairment",
+        "Alerting Network Degradation"
+      ],
+      "primary_papers": [
+        {
+          "authors": "Christakis, D. A., Ramirez, J. S. B., Ferguson, S. M.",
+          "year": 2018,
+          "title": "How early media exposure may affect cognitive function: A review of results from observations in humans and experiments in mice",
+          "journal": "Proc Natl Acad Sci U S A",
+          "doi": "10.1073/pnas.1711548115",
+          "pmid": "30275319"
+        },
+        {
+          "authors": "Zhai, G., Feng, Y., Ling, X.",
+          "year": 2025,
+          "title": "The sacrifice of alerting in active short video users: Evidence from executive control and default mode network functional connectivity",
+          "journal": "Neuropsychologia",
+          "doi": "10.1016/j.neuropsychologia.2025.109291",
+          "pmid": "41047096"
+        },
+        {
+          "authors": "Xiao, T., Peng, H., Liang, Z.",
+          "year": 2026,
+          "title": "When Screens Replace Sleep: Short Video Addiction Impairs Executive Function Through Sleep Disruption in Youth-Is Physical Activity the Antidote?",
+          "journal": "Brain Behav",
+          "doi": "10.1002/brb3.71369",
+          "pmid": "41992770"
+        }
+      ]
+    },
+    {
+      "id": "VEC-03",
+      "name": "Attention Restoration Theory (ART) & Offline Prescriptions",
+      "file": "03_ATTENTION_RESTORATION_THEORY_AND_OFFLINE_INTERVENTIONS.md",
+      "core_concepts": [
+        "Attention Restoration Theory (ART)",
+        "Directed Attention Fatigue (DAF)",
+        "Soft Fascination",
+        "Biodiversity Mental Health Buffer",
+        "Prescriptive Offline Activities (Zoo, Science, Sports, Crafting)"
+      ],
+      "primary_papers": [
+        {
+          "authors": "Kaplan, S.",
+          "year": 1995,
+          "title": "The restorative benefits of nature: Toward an integrative framework",
+          "journal": "Journal of Environmental Psychology",
+          "doi": "10.1016/0272-4944(95)90001-2"
+        },
+        {
+          "authors": "Fowler, C. H., Luby, J. L., Bastain, T. M.",
+          "year": 2026,
+          "title": "Green space is associated with better directed attention and higher crystallized intelligence in middle childhood: Evidence from the ABCD study",
+          "journal": "Environ Int",
+          "doi": "10.1016/j.envint.2026.110502",
+          "pmid": "42691636"
+        },
+        {
+          "authors": "Taylor, A. F., Kuo, F. E.",
+          "year": 2009,
+          "title": "Children with attention deficits concentrate better after walk in the park",
+          "journal": "Journal of Attention Disorders",
+          "doi": "10.1177/1087054708323000",
+          "pmid": "18725654"
+        },
+        {
+          "authors": "Sudimac, S., Drewelies, J., de Weerth, C.",
+          "year": 2026,
+          "title": "Effects of a walk in a residential natural vs. urban environment on objective and subjective stress indicators in mothers and their infants",
+          "journal": "Environ Res",
+          "doi": "10.1016/j.envres.2026.125125",
+          "pmid": "42361874"
+        }
+      ]
+    },
+    {
+      "id": "VEC-04",
+      "name": "Algorithmic Scoring Engine & Mathematical Formulation",
+      "file": "04_ALGORITHMIC_SCORING_AND_RECOMMENDATION_ENGINE_SPEC.md",
+      "core_concepts": [
+        "Consumption Health Index (I_sc)",
+        "Chromatic Continuous Interpolation (Red-Amber-Green)",
+        "State Machine Live Slot Actions",
+        "Firestore Document Schemas",
+        "TypeScript Interfaces"
+      ]
+    }
+  ]
+}

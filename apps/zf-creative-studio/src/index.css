@@ -1,0 +1,122 @@
+@import './styles/liquid-glass.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   MODO CLARO (DEFAULT ZENTRYOS CANONICAL - MESA DE TRABAJO)
+   ========================================================= */
+:root, [data-theme="light"] {
+  /* Core Brand Tokens */
+  --color-primary: #533B87;
+  --color-primary-light: #7A59BF;
+  --color-lavender: #D6C8FA;
+  --color-mint: #C2F4E7;
+  --color-glow: #00F2FE;
+  --color-dark-neutral: #4A5160;
+
+  /* Fondos */
+  --bg-canvas: #F8F6FE;
+  --bg-canvas-gradient: 
+    radial-gradient(circle at 15% 10%, rgba(214, 200, 250, 0.45) 0%, transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(194, 244, 231, 0.35) 0%, transparent 35%),
+    radial-gradient(circle at 50% 90%, rgba(0, 242, 254, 0.12) 0%, transparent 45%),
+    linear-gradient(180deg, #FFFFFF 0%, #F5F1FD 100%);
+  
+  --bg-card: rgba(255, 255, 255, 0.88);
+  --bg-card-hover: rgba(255, 255, 255, 0.96);
+  --bg-surface-elevated: #FFFFFF;
+  
+  /* Bordes & Vidrio */
+  --border-glass: rgba(83, 59, 135, 0.12);
+  --border-glass-hover: rgba(83, 59, 135, 0.25);
+  --border-glow: rgba(0, 242, 254, 0.45);
+  --shadow-card: 0 8px 30px rgba(83, 59, 135, 0.08);
+
+  /* Tipografía */
+  --text-main: #1E1633;        /* Púrpura noche profundo de máximo contraste */
+  --text-muted: #5E6475;       /* Gris neutro de lectura clara */
+  --text-inverted: #FFFFFF;    /* Texto sobre botones primarios */
+
+  /* Acentos y Acciones */
+  --btn-primary-bg: #533B87;
+  --btn-primary-hover: #6A4CA8;
+  --btn-primary-text: #FFFFFF;
+  --btn-secondary-bg: #F0ECFC;
+  --btn-secondary-text: #533B87;
+  --badge-mint-bg: rgba(194, 244, 231, 0.45);
+  --badge-mint-text: #0E5A49;
+}
+
+html, body, #root {
+  height: 100dvh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+}
+
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-canvas);
+  background-image: var(--bg-canvas-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Barra Superior de Resplandor (Top Glow Bar - Mesa de Trabajo 02) */
+.top-glow-bar {
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #533B87, #00F2FE, #D6C8FA, #C2F4E7);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
+}
+
+/* Físicas de resorte táctil Zentry */
+.zentry-spring-press {
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+
+.zentry-spring-press:active {
+  transform: scale(0.94);
+}
+
+/* Tarjeta y Panel Liquid Glass para Modo Claro */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-card);
+}
+
+.zentry-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.zentry-card:hover {
+  border-color: var(--border-glass-hover);
+  transform: translateY(-2px);
+}
+
+/* No scrollbar helper */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

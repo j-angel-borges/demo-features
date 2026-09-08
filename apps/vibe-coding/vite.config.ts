@@ -1,0 +1,22 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+import { zentrySyncPlugin } from '../../packages/shared/src/viteSyncPlugin';
+
+export default defineConfig({
+  plugins: [react(), zentrySyncPlugin()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      '@zentry/shared': path.resolve(__dirname, '../../packages/shared/src/index.ts'),
+    },
+  },
+  server: {
+    port: 5177,
+    host: true,
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+  },
+});

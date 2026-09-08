@@ -1,0 +1,63 @@
+{
+  "name": "zentry-commercial-demo-suite",
+  "version": "1.0.0",
+  "description": "Zentry Commercial Demo Suite - 3 Interconnected Micro-PWAs with Liquid Glass & GCP quarz-group Firestore sync",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npx concurrently -n \"island,skinner,parent,creative\" -c \"cyan,magenta,green,yellow\" \"npm:dev:island\" \"npm:dev:skinner\" \"npm:dev:parent\" \"npm:dev:creative\"",
+    "dev:island": "npm run dev -w apps/zf-isla-dinamica",
+    "dev:skinner": "npm run dev -w apps/zf-skinner-box",
+    "dev:parent": "npm run dev -w apps/zf-parental-dashboard",
+    "dev:creative": "npm run dev -w apps/zf-creative-studio",
+    "dev:vibe": "npm run dev -w apps/vibe-coding",
+    "build": "npm run build --workspaces --if-present",
+    "build:shared": "npm run build -w packages/shared",
+    "build:island": "npm run build -w apps/zf-isla-dinamica",
+    "build:skinner": "npm run build -w apps/zf-skinner-box",
+    "build:parent": "npm run build -w apps/zf-parental-dashboard",
+    "build:creative": "npm run build -w apps/zf-creative-studio",
+    "build:vibe": "npm run build -w apps/vibe-coding",
+    "test": "node --import tsx tests/test-runner.ts",
+    "test:runner": "npx tsx tests/test-runner.ts",
+    "typecheck": "tsc -b --dry"
+  },
+  "keywords": [
+    "zentry",
+    "micro-pwa",
+    "liquid-glass",
+    "gemini-live",
+    "skinner-box",
+    "quarz-group",
+    "firestore"
+  ],
+  "author": "Zentry OS Team",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "clsx": "^2.1.1",
+    "firebase": "^11.0.1",
+    "framer-motion": "^11.11.17",
+    "lucide-react": "^0.460.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.4"
+  },
+  "devDependencies": {
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}

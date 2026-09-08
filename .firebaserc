@@ -1,0 +1,27 @@
+{
+  "projects": {
+    "default": "quarz-group"
+  },
+  "targets": {
+    "quarz-group": {
+      "hosting": {
+        "isla-dinamica": [
+          "zf-isla-dinamica"
+        ],
+        "skinner-box": [
+          "zf-skinner-box"
+        ],
+        "parental-feature": [
+          "zf-parental-d"
+        ],
+        "creative-studio": [
+          "zf-creative-studio"
+        ],
+        "z-bio-morph": [
+          "z-bio-morph"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

@@ -1,0 +1,572 @@
+{
+  "catalogVersion": "3.0.0",
+  "lastUpdated": "2026-09-02T18:30:00Z",
+  "decayModel": {
+    "stage1_nominalDurationRange": [
+      30,
+      45
+    ],
+    "stage2_nominalDurationRange": [
+      12,
+      22
+    ],
+    "stage3_nominalDurationRange": [
+      5,
+      10
+    ],
+    "jackpot_nominalDuration": 42,
+    "jackpotInterval": 7
+  },
+  "childVideos": [
+    {
+      "id": "ch_long_01",
+      "mode": "child",
+      "stage": 1,
+      "title": "El misterioso viaje de la Ballena Azul",
+      "topic": "Biología Marina",
+      "category": "educational",
+      "nominalDurationSeconds": 30,
+      "dopamineScore": 30,
+      "cognitiveLoad": 85,
+      "description": "🌊 Descubre cómo duermen las ballenas a cientos de metros en el océano",
+      "narrativeHook": "🌊 Descubre cómo duermen las ballenas a cientos de metros en el océano",
+      "thumbnailGradient": [
+        "#1e1b4b",
+        "#4338ca"
+      ],
+      "accentColor": "#38BDF8",
+      "canvasAnimationType": "cellular",
+      "soundtrackTempoBpm": 120,
+      "videoUrl": "/videos/video_30s_naturaleza.mp4",
+      "creatorHandle": "@oceano_salvaje",
+      "creatorName": "Oceano Salvaje",
+      "creatorAvatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80",
+      "isVerifiedCreator": true,
+      "likesCount": 245000,
+      "commentsCount": 3100,
+      "bookmarksCount": 61250,
+      "sharesCount": 29400,
+      "soundTitle": "Sonido Original - Oceano Salvaje",
+      "hashtags": [
+        "#shorts",
+        "#parati",
+        "#biologiamarina"
+      ],
+      "isJackpot": false,
+      "comments": [
+        {
+          "id": "c1",
+          "author": "Alex_Explorer",
+          "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80",
+          "text": "¡Increíble cómo se ve en vertical! 🤯",
+          "likes": 1420,
+          "timeAgo": "2h"
+        },
+        {
+          "id": "c2",
+          "author": "Sofi_Tech",
+          "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80",
+          "text": "No puedo parar de ver esto 🔥",
+          "likes": 890,
+          "timeAgo": "5h"
+        }
+      ],
+      "posterUrl": "/videos/video_30s_naturaleza.webp"
+    },
+    {
+      "id": "ch_long_02",
+      "mode": "child",
+      "stage": 1,
+      "title": "¿Cuánto tarda la luz del Sol en llegar a la Tierra?",
+      "topic": "Astrofísica Infantil",
+      "category": "educational",
+      "nominalDurationSeconds": 45,
+      "dopamineScore": 30,
+      "cognitiveLoad": 85,
+      "description": "☀️ Un fotón tarda 8 minutos y 20 segundos a 300,000 km/s",
+      "narrativeHook": "☀️ Un fotón tarda 8 minutos y 20 segundos a 300,000 km/s",
+      "thumbnailGradient": [
+        "#1e1b4b",
+        "#4338ca"
+      ],
+      "accentColor": "#FBBF24",
+      "canvasAnimationType": "cellular",
+      "soundtrackTempoBpm": 120,
+      "videoUrl": "/videos/video_45s_cosmos.mp4",
+      "creatorHandle": "@cosmos_express",
+      "creatorName": "Cosmos Express",
+      "creatorAvatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80",
+      "isVerifiedCreator": true,
+      "likesCount": 389000,
+      "commentsCount": 4200,
+      "bookmarksCount": 97250,
+      "sharesCount": 46680,
+      "soundTitle": "Sonido Original - Cosmos Express",
+      "hashtags": [
+        "#shorts",
+        "#parati",
+        "#astrofisicainfantil"
+      ],
+      "isJackpot": false,
+      "comments": [
+        {
+          "id": "c1",
+          "author": "Alex_Explorer",
+          "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80",
+          "text": "¡Increíble cómo se ve en vertical! 🤯",
+          "likes": 1420,
+          "timeAgo": "2h"
+        },
+        {
+          "id": "c2",
+          "author": "Sofi_Tech",
+          "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80",
+          "text": "No puedo parar de ver esto 🔥",
+          "likes": 890,
+          "timeAgo": "5h"
+        }
+      ],
+      "posterUrl": "/videos/video_45s_cosmos.webp"
+    },
+    {
+      "id": "ch_long_03",
+      "mode": "child",
+      "stage": 1,
+      "title": "La ciudad subterránea de las Hormigas",
+      "topic": "Entomología",
+      "category": "educational",
+      "nominalDurationSeconds": 30,
+      "dopamineScore": 30,
+      "cognitiveLoad": 85,
+      "description": "🐜 Millones de obreras construyendo túneles de ventilación y granjas",
+      "narrativeHook": "🐜 Millones de obreras construyendo túneles de ventilación y granjas",
+      "thumbnailGradient": [
+        "#1e1b4b",
+        "#4338ca"
+      ],
+      "accentColor": "#4ADE80",
+      "canvasAnimationType": "cellular",
+      "soundtrackTempoBpm": 120,
+      "videoUrl": "/videos/video_30s_naturaleza.mp4",
+      "creatorHandle": "@mundo_micro",
+      "creatorName": "Mundo Micro",
+      "creatorAvatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80",
+      "isVerifiedCreator": true,
+      "likesCount": 182000,
+      "commentsCount": 1900,
+      "bookmarksCount": 45500,
+      "sharesCount": 21840,
+      "soundTitle": "Sonido Original - Mundo Micro",
+      "hashtags": [
+        "#shorts",
+        "#parati",
+        "#entomologia"
+      ],
+      "isJackpot": false,
+      "comments": [
+        {
+          "id": "c1",
+          "author": "Alex_Explorer",
+          "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80",
+          "text": "¡Increíble cómo se ve en vertical! 🤯",
+          "likes": 1420,
+          "timeAgo": "2h"
+        },
+        {
+          "id": "c2",
+          "author": "Sofi_Tech",
+          "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80",
+          "text": "No puedo parar de ver esto 🔥",
+          "likes": 890,
+          "timeAgo": "5h"
+        }
+      ],
+      "posterUrl": "/videos/video_30s_naturaleza.webp"
+    },
+    {
+      "id": "ch_mid_01",
+      "mode": "child",
+      "stage": 2,
+      "title": "Animales que duermen de pie",
+      "topic": "Curiosidades Animales",
+      "category": "trivia",
+      "nominalDurationSeconds": 15,
+      "dopamineScore": 30,
+      "cognitiveLoad": 85,
+      "description": "🦩 El mecanismo automático de bloqueo de articulaciones",
+      "narrativeHook": "🦩 El mecanismo automático de bloqueo de articulaciones",
+      "thumbnailGradient": [
+        "#1e1b4b",
+        "#4338ca"
+      ],
+      "accentColor": "#D6C8FA",
+      "canvasAnimationType": "cellular",
+      "soundtrackTempoBpm": 120,
+      "videoUrl": "/videos/video_15s_ciencia.mp4",
+      "creatorHandle": "@curioso_express",
+      "creatorName": "Curioso Express",
+      "creatorAvatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80",
+      "isVerifiedCreator": true,
+      "likesCount": 512000,
+      "commentsCount": 6800,
+      "bookmarksCount": 128000,
+      "sharesCount": 61440,
+      "soundTitle": "Sonido Original - Curioso Express",
+      "hashtags": [
+        "#shorts",
+        "#parati",
+        "#curiosidadesanimales"
+      ],
+      "isJackpot": false,
+      "comments": [
+        {
+          "id": "c1",
+          "author": "Alex_Explorer",
+          "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80",
+          "text": "¡Increíble cómo se ve en vertical! 🤯",
+          "likes": 1420,
+          "timeAgo": "2h"
+        },
+        {
+          "id": "c2",
+          "author": "Sofi_Tech",
+          "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80",
+          "text": "No puedo parar de ver esto 🔥",
+          "likes": 890,
+          "timeAgo": "5h"
+        }
+      ],
+      "posterUrl": "/videos/video_15s_ciencia.webp"
+    },
+    {
+      "id": "ch_mid_02",
+      "mode": "child",
+      "stage": 2,
+      "title": "¿Por qué el cielo es azul en 15s?",
+      "topic": "Óptica Rápida",
+      "category": "trivia",
+      "nominalDurationSeconds": 15,
+      "dopamineScore": 30,
+      "cognitiveLoad": 85,
+      "description": "🌈 La dispersión de Rayleigh en la atmósfera explicada",
+      "narrativeHook": "🌈 La dispersión de Rayleigh en la atmósfera explicada",
+      "thumbnailGradient": [
+        "#1e1b4b",
+        "#4338ca"
+      ],
+      "accentColor": "#38BDF8",
+      "canvasAnimationType": "cellular",
+      "soundtrackTempoBpm": 120,
+      "videoUrl": "/videos/video_15s_ciencia.mp4",
+      "creatorHandle": "@profe_ciencias",
+      "creatorName": "Profe Ciencias",
+      "creatorAvatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80",
+      "isVerifiedCreator": true,
+      "likesCount": 640000,
+      "commentsCount": 8200,
+      "bookmarksCount": 160000,
+      "sharesCount": 76800,
+      "soundTitle": "Sonido Original - Profe Ciencias",
+      "hashtags": [
+        "#shorts",
+        "#parati",
+        "#opticarápida"
+      ],
+      "isJackpot": false,
+      "comments": [
+        {
+          "id": "c1",
+          "author": "Alex_Explorer",
+          "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80",
+          "text": "¡Increíble cómo se ve en vertical! 🤯",
+          "likes": 1420,
+          "timeAgo": "2h"
+        },
+        {
+          "id": "c2",
+          "author": "Sofi_Tech",
+          "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80",
+          "text": "No puedo parar de ver esto 🔥",
+          "likes": 890,
+          "timeAgo": "5h"
+        }
+      ],
+      "posterUrl": "/videos/video_15s_ciencia.webp"
+    },
+    {
+      "id": "ch_mid_03",
+      "mode": "child",
+      "stage": 2,
+      "title": "Dinosaurios con plumas reales",
+      "topic": "Paleontología Express",
+      "category": "trivia",
+      "nominalDurationSeconds": 10,
+      "dopamineScore": 30,
+      "cognitiveLoad": 85,
+      "description": "🦖 Fósiles en ámbar demuestran su verdadero plumaje rapaz",
+      "narrativeHook": "🦖 Fósiles en ámbar demuestran su verdadero plumaje rapaz",
+      "thumbnailGradient": [
+        "#1e1b4b",
+        "#4338ca"
+      ],
+      "accentColor": "#FB923C",
+      "canvasAnimationType": "cellular",
+      "soundtrackTempoBpm": 120,
+      "videoUrl": "/videos/video_10s_asmr.mp4",
+      "creatorHandle": "@paleo_facts",
+      "creatorName": "Paleo Facts",
+      "creatorAvatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80",
+      "isVerifiedCreator": true,
+      "likesCount": 780000,
+      "commentsCount": 9400,
+      "bookmarksCount": 195000,
+      "sharesCount": 93600,
+      "soundTitle": "Sonido Original - Paleo Facts",
+      "hashtags": [
+        "#shorts",
+        "#parati",
+        "#paleontologiaexpress"
+      ],
+      "isJackpot": false,
+      "comments": [
+        {
+          "id": "c1",
+          "author": "Alex_Explorer",
+          "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80",
+          "text": "¡Increíble cómo se ve en vertical! 🤯",
+          "likes": 1420,
+          "timeAgo": "2h"
+        },
+        {
+          "id": "c2",
+          "author": "Sofi_Tech",
+          "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80",
+          "text": "No puedo parar de ver esto 🔥",
+          "likes": 890,
+          "timeAgo": "5h"
+        }
+      ],
+      "posterUrl": "/videos/video_10s_asmr.webp"
+    },
+    {
+      "id": "ch_fast_01",
+      "mode": "child",
+      "stage": 3,
+      "title": "¡Slime Neón Crunch en 8s!",
+      "topic": "Sensorial Rápido",
+      "category": "hyper_fragmented",
+      "nominalDurationSeconds": 10,
+      "dopamineScore": 95,
+      "cognitiveLoad": 15,
+      "description": "✨ Textura elástica ultra crujiente con sonido ASMR",
+      "narrativeHook": "✨ Textura elástica ultra crujiente con sonido ASMR",
+      "thumbnailGradient": [
+        "#1e1b4b",
+        "#4338ca"
+      ],
+      "accentColor": "#F472B6",
+      "canvasAnimationType": "popit_bubble",
+      "soundtrackTempoBpm": 120,
+      "videoUrl": "/videos/video_10s_asmr.mp4",
+      "creatorHandle": "@neon_asmr",
+      "creatorName": "Neon ASMR",
+      "creatorAvatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80",
+      "isVerifiedCreator": true,
+      "likesCount": 1450000,
+      "commentsCount": 18200,
+      "bookmarksCount": 362500,
+      "sharesCount": 174000,
+      "soundTitle": "Sonido Original - Neon ASMR",
+      "hashtags": [
+        "#shorts",
+        "#parati",
+        "#sensorialrápido"
+      ],
+      "isJackpot": false,
+      "comments": [
+        {
+          "id": "c1",
+          "author": "Alex_Explorer",
+          "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80",
+          "text": "¡Increíble cómo se ve en vertical! 🤯",
+          "likes": 1420,
+          "timeAgo": "2h"
+        },
+        {
+          "id": "c2",
+          "author": "Sofi_Tech",
+          "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80",
+          "text": "No puedo parar de ver esto 🔥",
+          "likes": 890,
+          "timeAgo": "5h"
+        }
+      ],
+      "posterUrl": "/videos/video_10s_asmr.webp"
+    },
+    {
+      "id": "ch_fast_02",
+      "mode": "child",
+      "stage": 3,
+      "title": "Pop-It Infinito a 120 BPM",
+      "topic": "ASMR / Háptico",
+      "category": "hyper_fragmented",
+      "nominalDurationSeconds": 5,
+      "dopamineScore": 95,
+      "cognitiveLoad": 15,
+      "description": "🫧 Burbujas hiperactivas reventando sin parar",
+      "narrativeHook": "🫧 Burbujas hiperactivas reventando sin parar",
+      "thumbnailGradient": [
+        "#1e1b4b",
+        "#4338ca"
+      ],
+      "accentColor": "#C2F4E7",
+      "canvasAnimationType": "popit_bubble",
+      "soundtrackTempoBpm": 120,
+      "videoUrl": "/videos/video_5s_loop.mp4",
+      "creatorHandle": "@fidget_master",
+      "creatorName": "Fidget Master",
+      "creatorAvatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80",
+      "isVerifiedCreator": true,
+      "likesCount": 2310000,
+      "commentsCount": 28900,
+      "bookmarksCount": 577500,
+      "sharesCount": 277200,
+      "soundTitle": "Sonido Original - Fidget Master",
+      "hashtags": [
+        "#shorts",
+        "#parati",
+        "#asmr/háptico"
+      ],
+      "isJackpot": false,
+      "comments": [
+        {
+          "id": "c1",
+          "author": "Alex_Explorer",
+          "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80",
+          "text": "¡Increíble cómo se ve en vertical! 🤯",
+          "likes": 1420,
+          "timeAgo": "2h"
+        },
+        {
+          "id": "c2",
+          "author": "Sofi_Tech",
+          "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80",
+          "text": "No puedo parar de ver esto 🔥",
+          "likes": 890,
+          "timeAgo": "5h"
+        }
+      ],
+      "posterUrl": "/videos/video_5s_loop.webp"
+    },
+    {
+      "id": "ch_fast_03",
+      "mode": "child",
+      "stage": 3,
+      "title": "Gatito Bailando Pixel Glitch",
+      "topic": "Micro Meme",
+      "category": "hyper_fragmented",
+      "nominalDurationSeconds": 5,
+      "dopamineScore": 95,
+      "cognitiveLoad": 15,
+      "description": "🐱 Bucle acelerado de máxima sobrecarga sensorial",
+      "narrativeHook": "🐱 Bucle acelerado de máxima sobrecarga sensorial",
+      "thumbnailGradient": [
+        "#1e1b4b",
+        "#4338ca"
+      ],
+      "accentColor": "#F0ABFC",
+      "canvasAnimationType": "popit_bubble",
+      "soundtrackTempoBpm": 120,
+      "videoUrl": "/videos/video_5s_loop.mp4",
+      "creatorHandle": "@meme_cats_8bit",
+      "creatorName": "Meme Cats 8Bit",
+      "creatorAvatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80",
+      "isVerifiedCreator": true,
+      "likesCount": 3900000,
+      "commentsCount": 49000,
+      "bookmarksCount": 975000,
+      "sharesCount": 468000,
+      "soundTitle": "Sonido Original - Meme Cats 8Bit",
+      "hashtags": [
+        "#shorts",
+        "#parati",
+        "#micromeme"
+      ],
+      "isJackpot": false,
+      "comments": [
+        {
+          "id": "c1",
+          "author": "Alex_Explorer",
+          "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80",
+          "text": "¡Increíble cómo se ve en vertical! 🤯",
+          "likes": 1420,
+          "timeAgo": "2h"
+        },
+        {
+          "id": "c2",
+          "author": "Sofi_Tech",
+          "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80",
+          "text": "No puedo parar de ver esto 🔥",
+          "likes": 890,
+          "timeAgo": "5h"
+        }
+      ],
+      "posterUrl": "/videos/video_5s_loop.webp"
+    },
+    {
+      "id": "ch_jackpot_01",
+      "mode": "child",
+      "stage": "jackpot",
+      "title": "⭐ El Nacimiento de una Estrella (Telescopio James Webb)",
+      "topic": "Astronomía Profunda",
+      "category": "jackpot",
+      "nominalDurationSeconds": 45,
+      "dopamineScore": 100,
+      "cognitiveLoad": 85,
+      "description": "🌟 ¡Premio Exclusivo! Pilares de la Creación capturados en infrarrojo",
+      "narrativeHook": "🌟 ¡Premio Exclusivo! Pilares de la Creación capturados en infrarrojo",
+      "thumbnailGradient": [
+        "#1e1b4b",
+        "#4338ca"
+      ],
+      "accentColor": "#FBBF24",
+      "canvasAnimationType": "galaxy",
+      "soundtrackTempoBpm": 120,
+      "videoUrl": "/videos/video_45s_cosmos.mp4",
+      "creatorHandle": "@nasa_space_kids",
+      "creatorName": "NASA Space Kids",
+      "creatorAvatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80",
+      "isVerifiedCreator": true,
+      "likesCount": 2100000,
+      "commentsCount": 19500,
+      "bookmarksCount": 525000,
+      "sharesCount": 252000,
+      "soundTitle": "Sonido Original - NASA Space Kids",
+      "hashtags": [
+        "#shorts",
+        "#parati",
+        "#astronomiaprofunda"
+      ],
+      "isJackpot": true,
+      "comments": [
+        {
+          "id": "c1",
+          "author": "Alex_Explorer",
+          "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80",
+          "text": "¡Increíble cómo se ve en vertical! 🤯",
+          "likes": 1420,
+          "timeAgo": "2h"
+        },
+        {
+          "id": "c2",
+          "author": "Sofi_Tech",
+          "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80",
+          "text": "No puedo parar de ver esto 🔥",
+          "likes": 890,
+          "timeAgo": "5h"
+        }
+      ],
+      "posterUrl": "/videos/video_45s_cosmos.webp"
+    }
+  ]
+}

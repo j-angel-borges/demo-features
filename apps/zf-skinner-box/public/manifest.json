@@ -1,0 +1,18 @@
+{
+  "short_name": "SkinnerBox",
+  "name": "Zentry Skinner Box Simulator",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#080D1A",
+  "theme_color": "#080D1A",
+  "display": "standalone",
+  "orientation": "portrait",
+  "description": "Zentry Skinner Box - Simulador de Condicionamiento Operante y Refuerzo Variable (VR-7)"
+}

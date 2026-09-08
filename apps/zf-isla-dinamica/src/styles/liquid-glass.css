@@ -1,0 +1,184 @@
+/**
+ * Zentry DNA - Liquid Glass Optics & Refraction Stylesheet
+ * Strictly implements canonical tokens & specular glassmorphism
+ */
+
+:root {
+  --zentry-purpura: #533B87;
+  --zentry-lavanda: #D6C8FA;
+  --zentry-menta: #C2F4E7;
+  --zentry-glacial: #EBF1F5;
+  --zentry-slate: #4A5160;
+  --zentry-dark: #080D1A;
+}
+
+/* Light Theme Variables (DEFAULT Zentry Version) */
+.theme-light, :root:not(.dark) {
+  --bg-base: #FBFCFD;
+  --bg-ambient: radial-gradient(at 0% 0%, hsl(214 100% 97% / 0.90) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, hsl(258 90% 96% / 0.90) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, hsl(165 75% 94% / 0.70) 0px, transparent 50%);
+  --text-main: #242730;
+  --text-muted: #4A5160;
+  
+  --island-bg: rgba(255, 255, 255, 0.92);
+  --island-border: rgba(214, 200, 250, 0.85);
+  --island-shadow: 0 20px 50px -10px rgba(83, 59, 135, 0.15), 0 4px 16px -2px rgba(83, 59, 135, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+  
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(214, 200, 250, 0.65);
+  --card-shadow: 0 12px 36px -6px rgba(83, 59, 135, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.95);
+
+  --pill-bg: rgba(255, 255, 255, 0.90);
+  --pill-border: rgba(214, 200, 250, 0.70);
+  --pill-text: #533B87;
+
+  --btn-bg: rgba(83, 59, 135, 0.08);
+  --btn-border: rgba(214, 200, 250, 0.60);
+  --btn-hover-bg: rgba(83, 59, 135, 0.15);
+  --btn-text: #242730;
+}
+
+/* Dark Theme Variables (Obsidian Liquid Glass) */
+.theme-dark, :root.dark {
+  --bg-base: #080D1A;
+  --bg-ambient: radial-gradient(at 0% 0%, rgba(83, 59, 135, 0.25) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(194, 244, 231, 0.12) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(214, 200, 250, 0.15) 0px, transparent 50%);
+  --text-main: #EBF1F5;
+  --text-muted: #CBD1D7;
+
+  --island-bg: rgba(8, 13, 26, 0.82);
+  --island-border: rgba(214, 200, 250, 0.24);
+  --island-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.75), inset 0 1px 2px rgba(255, 255, 255, 0.35);
+
+  --card-bg: rgba(12, 17, 33, 0.82);
+  --card-border: rgba(214, 200, 250, 0.18);
+  --card-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.60), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+
+  --pill-bg: rgba(14, 11, 28, 0.90);
+  --pill-border: rgba(214, 200, 250, 0.28);
+  --pill-text: #EBF1F5;
+
+  --btn-bg: rgba(214, 200, 250, 0.10);
+  --btn-border: rgba(214, 200, 250, 0.22);
+  --btn-hover-bg: rgba(214, 200, 250, 0.18);
+  --btn-text: #EBF1F5;
+}
+
+/* Liquid Glass Island Container */
+.zentry-liquid-island {
+  background: var(--island-bg);
+  backdrop-filter: blur(32px) saturate(190%);
+  -webkit-backdrop-filter: blur(32px) saturate(190%);
+  border: 1px solid var(--island-border);
+  box-shadow: var(--island-shadow);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Liquid Glass Compact Pill */
+.zentry-liquid-pill {
+  background: var(--pill-bg);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--pill-border);
+  color: var(--pill-text);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Liquid Glass Floating Cards */
+.zentry-liquid-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+}
+
+/* Interactive Glass Buttons */
+.zentry-liquid-btn {
+  background: var(--btn-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--btn-border);
+  color: var(--btn-text);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.zentry-liquid-btn:hover {
+  background: var(--btn-hover-bg);
+  border-color: #533B87;
+  transform: translateY(-1px);
+}
+
+.zentry-liquid-btn:hover {
+  background: rgba(214, 200, 250, 0.18);
+  border-color: rgba(194, 244, 231, 0.45);
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.45),
+    0 0 16px rgba(194, 244, 231, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.zentry-liquid-btn:active {
+  transform: scale(0.96);
+}
+
+/* Active Glows */
+.zentry-glow-menta {
+  box-shadow: 0 0 28px -2px rgba(194, 244, 231, 0.55);
+}
+
+.zentry-glow-purpura {
+  box-shadow: 0 0 32px -4px rgba(83, 59, 135, 0.70);
+}
+
+.zentry-glow-lavanda {
+  box-shadow: 0 0 24px -2px rgba(214, 200, 250, 0.50);
+}
+
+/* Voice Orb Pulse */
+.zentry-voice-pulse {
+  animation: voicePulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes voicePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 30px rgba(194, 244, 231, 0.5), 0 0 60px rgba(83, 59, 135, 0.3);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 45px rgba(194, 244, 231, 0.8), 0 0 90px rgba(83, 59, 135, 0.55);
+  }
+}
+
+/* Radar Scan Line */
+.zentry-scan-line {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(194, 244, 231, 0.15) 50%,
+    rgba(194, 244, 231, 0.65) 95%,
+    #C2F4E7 100%
+  );
+  animation: scanLine 2.8s ease-in-out infinite;
+}
+
+@keyframes scanLine {
+  0% {
+    top: -10%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}

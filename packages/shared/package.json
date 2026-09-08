@@ -1,0 +1,27 @@
+{
+  "name": "@zentry/shared",
+  "version": "1.0.0",
+  "description": "Shared Zentry DNA design tokens, interface contracts, and Firestore client for quarz-group",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc && node ./build.cjs",
+    "watch": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "firebase": "^11.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

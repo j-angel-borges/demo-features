@@ -1,0 +1,15 @@
+{
+  "name": "Zentry Z-Art Creative WOW Studio",
+  "short_name": "Z-Art WOW",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080D1A",
+  "theme_color": "#533B87",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ]
+}

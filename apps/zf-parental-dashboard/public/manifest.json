@@ -1,0 +1,17 @@
+{
+  "name": "Zentry Parent Live Observador",
+  "short_name": "Parent Live",
+  "description": "Dashboard Parental Observador en Vivo para Zentry Commercial Demo Suite",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080D1A",
+  "theme_color": "#533B87",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
