@@ -1,49 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <radialGradient id="bgParental" cx="40%" cy="30%" r="85%">
-      <stop offset="0%" stop-color="#311F5E" />
-      <stop offset="60%" stop-color="#180F33" />
-      <stop offset="100%" stop-color="#090514" />
-    </radialGradient>
-    <linearGradient id="shieldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D6C8FA" />
-      <stop offset="50%" stop-color="#A855F7" />
-      <stop offset="100%" stop-color="#533B87" />
+    <!-- Dark elegant Zentry gradient -->
+    <linearGradient id="bgDarkPA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B1333"/>
+      <stop offset="50%" stop-color="#0F0A1F"/>
+      <stop offset="100%" stop-color="#05030A"/>
     </linearGradient>
-    <linearGradient id="emeraldCore" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ECFCF8" />
-      <stop offset="50%" stop-color="#C2F4E7" />
-      <stop offset="100%" stop-color="#1B6E5E" />
-    </linearGradient>
-    <filter id="glowParent" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="12" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+
+    <filter id="softGlowPA" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#D6C8FA" flood-opacity="0.25"/>
     </filter>
   </defs>
 
-  <!-- iOS / padOS Squircle Background -->
-  <rect width="512" height="512" rx="116" fill="url(#bgParental)" />
-  <rect x="12" y="12" width="488" height="488" rx="104" fill="none" stroke="#D6C8FA" stroke-width="4" stroke-opacity="0.25" />
+  <!-- Background Canvas (Dark Squircle) -->
+  <rect width="512" height="512" rx="112" fill="url(#bgDarkPA)"/>
 
-  <!-- Shield Shape of Family Protection -->
-  <path d="M256 90 L390 145 C390 280 256 400 256 420 C256 400 122 280 122 145 Z" 
-        fill="url(#shieldGlow)" stroke="#D6C8FA" stroke-width="6" filter="url(#glowParent)" />
+  <!-- Minimalist Inset Border -->
+  <rect x="28" y="28" width="456" height="456" rx="92" fill="none" stroke="#D6C8FA" stroke-width="8" stroke-opacity="0.2"/>
 
-  <!-- Inner Dark Glass Core -->
-  <path d="M256 120 L360 165 C360 265 256 370 256 385 C256 370 152 265 152 165 Z" 
-        fill="#080D1A" opacity="0.85" />
+  <!-- Clean, bold, elegant PA Monogram in Crisp White -->
+  <g filter="url(#softGlowPA)" fill="#FFFFFF">
+    <!-- "P" Glyph (Clean Geometric) -->
+    <path d="
+      M 95 160 
+      H 195 
+      C 232 160 255 180 255 218 
+      C 255 256 232 276 195 276 
+      H 147 
+      V 352 
+      H 95 
+      Z 
+      M 147 210 
+      V 226 
+      H 190 
+      C 202 226 210 220 210 218 
+      C 210 216 202 210 190 210 
+      Z
+    "/>
 
-  <!-- Center Family Heartbeat & Secure Keyhole -->
-  <!-- Top Protective Circle / Lock Arch -->
-  <circle cx="256" cy="215" r="32" fill="none" stroke="url(#emeraldCore)" stroke-width="12" stroke-linecap="round" />
-  
-  <!-- Encrypted Core Vault Emblem (Solid Glacial Jewel) -->
-  <rect x="232" y="240" width="48" height="60" rx="12" fill="url(#emeraldCore)" filter="url(#glowParent)" />
-  <circle cx="256" cy="265" r="7" fill="#080D1A" />
-  <path d="M256 268 L256 286" stroke="#080D1A" stroke-width="4" stroke-linecap="round" />
-
-  <!-- Live Pulse Beacon Dots -->
-  <circle cx="256" cy="336" r="6" fill="#C2F4E7" filter="url(#glowParent)" />
-  <circle cx="370" cy="140" r="10" fill="#FBBF24" filter="url(#glowParent)" />
-  <circle cx="142" cy="140" r="10" fill="#38BDF8" filter="url(#glowParent)" />
+    <!-- "A" Glyph (Clean Geometric) -->
+    <path d="
+      M 345 160 
+      L 420 352 
+      H 368 
+      L 352 308 
+      H 288 
+      L 272 352 
+      H 220 
+      L 295 160 
+      Z 
+      M 338 266 
+      L 320 212 
+      L 302 266 
+      Z
+    "/>
+  </g>
 </svg>
