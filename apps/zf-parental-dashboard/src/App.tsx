@@ -130,83 +130,36 @@ export const App: React.FC = () => {
         onToggleTheme={toggleTheme}
       />
 
-      {/* Main Container */}
-      <main className="max-w-7xl mx-auto px-4 lg:px-8 space-y-6">
-        {/* VIEW 1: Overview / All-in-One Live Cockpit */}
+      {/* Main Container - padOS Fixed Two-Column Layout */}
+      <main className="max-w-7xl mx-auto px-4 lg:px-6">
+        {/* VIEW 1: Overview / All-in-One Live Cockpit (padOS Split-Screen) */}
         {activeTab === 'overview' && (
-          <div className="space-y-6">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="lg:col-span-1">
-                <ChildProfileCard
-                  profile={childProfile}
-                  onOpenSettings={() => setIsSettingsOpen(true)}
-                  onToggleCircadian={toggleCircadian}
-                  isEmergencyLocked={isEmergencyLocked}
-                  onToggleEmergencyLock={handleToggleEmergencyLock}
-                />
-              </div>
-              <div className="lg:col-span-2">
-                <DocumentVault
-                  documents={documents.slice(0, 4)}
-                  allDocuments={allDocuments}
-                  activeCategory={activeCategory}
-                  onCategoryChange={setActiveCategory}
-                  searchQuery={searchQuery}
-                  onSearchChange={setSearchQuery}
-                  onSelectDoc={setSelectedDoc}
-                  onOpenUpload={() => setIsUploadOpen(true)}
-                  onDeleteDoc={handleDelete}
-                  categoryCounts={categoryCounts}
-                />
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            {/* Fixed Left Drawer / Card (Mateo Profile & Controls) */}
+            <div className="lg:col-span-4 lg:sticky lg:top-20">
+              <ChildProfileCard
+                profile={childProfile}
+                onOpenSettings={() => setIsSettingsOpen(true)}
+                onToggleCircadian={toggleCircadian}
+                isEmergencyLocked={isEmergencyLocked}
+                onToggleEmergencyLock={handleToggleEmergencyLock}
+              />
             </div>
 
-            {/* Quick-Access to Z-Art Creative WOW & Skinner Box */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Creative WOW Studio Card */}
-              <div className="p-4 sm:p-5 rounded-2xl glass-panel border border-[#EC4899]/30 bg-gradient-to-r from-[#EC4899]/10 to-[#533B87]/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-3 rounded-xl bg-pink-500/20 text-pink-400 border border-pink-500/30">
-                    <Palette className="w-5 h-5 text-pink-400" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
-                      <span>Z-Art Creativo (Factor WOW)</span>
-                      <span className="text-[9px] px-1.5 py-0.2 rounded-md bg-pink-500/20 text-pink-400 font-mono">IA 3D</span>
-                    </h4>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">Transforma dibujos en 3D Pixar y mini-apps interactivas.</p>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('creative')}
-                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-[#533B87] to-[#EC4899] hover:opacity-90 text-white text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 shadow-sm whitespace-nowrap"
-                >
-                  <span>Ver Galería</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-
-              {/* Skinner Box Observer Card */}
-              <div className="p-4 sm:p-5 rounded-2xl glass-panel border border-[#D6C8FA]/30 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-3 rounded-xl bg-violet-500/20 text-[#D6C8FA] border border-[#D6C8FA]/30">
-                    <Sparkles className="w-5 h-5 text-amber-400" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-900 dark:text-white">Observador Skinner Box</h4>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">Monitorea estímulos y hábitos de atención de tu hijo.</p>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('skinner')}
-                  className="px-4 py-2 rounded-xl bg-[#533B87] hover:bg-[#684BA8] text-white text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 shadow-sm whitespace-nowrap"
-                >
-                  <span>Abrir Observador</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
+            {/* Right Pane: Document Vault / Activities */}
+            <div className="lg:col-span-8">
+              <DocumentVault
+                documents={documents}
+                allDocuments={allDocuments}
+                activeCategory={activeCategory}
+                onCategoryChange={setActiveCategory}
+                searchQuery={searchQuery}
+                onSearchChange={setSearchQuery}
+                onSelectDoc={setSelectedDoc}
+                onOpenUpload={() => setIsUploadOpen(true)}
+                onDeleteDoc={handleDelete}
+                categoryCounts={categoryCounts}
+              />
             </div>
           </div>
         )}

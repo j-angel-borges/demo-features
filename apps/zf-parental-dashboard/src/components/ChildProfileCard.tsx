@@ -167,15 +167,15 @@ export const ChildProfileCard: React.FC<ChildProfileCardProps> = ({
       {/* Immediate Emergency Lock Action Row */}
       <div className="mt-3 pt-3 border-t border-slate-200 dark:border-[#D6C8FA]/15 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className={`p-2 rounded-xl ${isEmergencyLocked ? 'bg-red-500/20 text-red-500 animate-pulse' : 'bg-slate-100 dark:bg-slate-800 text-slate-500'}`}>
+          <div className={`p-1.5 rounded-xl ${isEmergencyLocked ? 'bg-red-500/20 text-red-500 animate-pulse' : 'bg-slate-100 dark:bg-slate-800 text-slate-500'}`}>
             <ShieldAlert className="w-4 h-4" />
           </div>
           <div>
-            <span className="text-xs font-bold text-slate-800 dark:text-white block">
-              {isEmergencyLocked ? 'Bloqueo Inmediato Activo' : 'Control de Acceso Inmediato'}
+            <span className="text-xs font-bold text-slate-850 dark:text-white block leading-tight">
+              {isEmergencyLocked ? 'Bloqueo Inmediato Activo' : 'Control de Acceso'}
             </span>
             <span className="text-[10px] text-slate-500 dark:text-slate-400">
-              {isEmergencyLocked ? 'Isla Dinámica y Skinner Box inhabilitados' : 'Inhabilita la cámara y feed de Mateo al instante'}
+              {isEmergencyLocked ? 'Dispositivos bloqueados' : 'Bloqueo rápido de sesión'}
             </span>
           </div>
         </div>
@@ -183,9 +183,9 @@ export const ChildProfileCard: React.FC<ChildProfileCardProps> = ({
         {onToggleEmergencyLock && (
           <button
             onClick={onToggleEmergencyLock}
-            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all shadow-md cursor-pointer flex items-center gap-1.5 ${
+            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all shadow-xs cursor-pointer flex items-center gap-1.5 ${
               isEmergencyLocked
-                ? 'bg-red-600 hover:bg-red-700 text-white shadow-[0_0_15px_rgba(239,68,68,0.5)] animate-pulse'
+                ? 'bg-red-600 hover:bg-red-700 text-white shadow-[0_0_12px_rgba(239,68,68,0.5)] animate-pulse'
                 : 'bg-red-50 hover:bg-red-100 dark:bg-red-950/40 dark:hover:bg-red-900/60 border border-red-300 dark:border-red-500/40 text-red-700 dark:text-red-300'
             }`}
           >
@@ -197,7 +197,7 @@ export const ChildProfileCard: React.FC<ChildProfileCardProps> = ({
             ) : (
               <>
                 <ShieldAlert className="w-3.5 h-3.5" />
-                <span>Bloquear Ahora</span>
+                <span>Bloquear</span>
               </>
             )}
           </button>
