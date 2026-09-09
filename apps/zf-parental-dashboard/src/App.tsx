@@ -128,12 +128,12 @@ export const App: React.FC = () => {
       />
 
       {/* Main Container - padOS Fixed Two-Column Layout */}
-      <main className="max-w-7xl mx-auto px-4 lg:px-6">
+      <main className="max-w-7xl mx-auto px-4 lg:px-6 pt-4">
         {/* VIEW 1: Overview / All-in-One Live Cockpit (padOS Split-Screen) */}
         {activeTab === 'overview' && (
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-            {/* Fixed Left Drawer / Card (Mateo Profile & Controls) */}
-            <div className="lg:col-span-4 lg:sticky lg:top-20">
+            {/* Left Card (Mateo Profile & Controls) */}
+            <div className="lg:col-span-4 flex flex-col">
               <ChildProfileCard
                 profile={childProfile}
                 onOpenSettings={() => setIsSettingsOpen(true)}
@@ -144,7 +144,7 @@ export const App: React.FC = () => {
             </div>
 
             {/* Right Pane: Document Vault / Activities */}
-            <div className="lg:col-span-8">
+            <div className="lg:col-span-8 flex flex-col">
               <DocumentVault
                 documents={documents}
                 allDocuments={allDocuments}

@@ -125,35 +125,37 @@ export const DocumentVault: React.FC<DocumentVaultProps> = ({
   };
 
   return (
-    <div className="glass-panel rounded-3xl p-5 sm:p-6 border border-[#D6C8FA]/25 shadow-xl flex flex-col gap-5">
-      {/* 1. Header Principal */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="p-2.5 rounded-2xl bg-violet-100 dark:bg-[#533B87]/40 border border-[#D6C8FA]/60 dark:border-[#D6C8FA]/30 text-[#533B87] dark:text-[#D6C8FA] shadow-xs">
-            <FolderLock className="w-5 h-5 text-[#533B87] dark:text-[#C2F4E7]" />
+    <div className="glass-panel rounded-3xl p-5 sm:p-6 border border-[#D6C8FA]/25 shadow-xl flex flex-col gap-4 lg:h-[calc(100vh-5.5rem)] overflow-hidden">
+      {/* Pinned Top Container: Header, Folders, Breadcrumbs & Search */}
+      <div className="shrink-0 flex flex-col gap-4">
+        {/* 1. Header Principal */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="p-2.5 rounded-2xl bg-violet-100 dark:bg-[#533B87]/40 border border-[#D6C8FA]/60 dark:border-[#D6C8FA]/30 text-[#533B87] dark:text-[#D6C8FA] shadow-xs">
+              <FolderLock className="w-5 h-5 text-[#533B87] dark:text-[#C2F4E7]" />
+            </div>
+            <div>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-[#EBF1F5] flex items-center gap-2">
+                Bóveda Documental Familiar
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#ECFCF8] dark:bg-[#C2F4E7]/15 text-[#1B6E5E] dark:text-[#C2F4E7] border border-[#C2F4E7]">
+                  Bóveda Encriptada
+                </span>
+              </h3>
+              <p className="text-xs text-slate-600 dark:text-[#D6C8FA]/80">
+                Explorador inteligente de expedientes escolares, salud e identidad familiar
+              </p>
+            </div>
           </div>
-          <div>
-            <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-[#EBF1F5] flex items-center gap-2">
-              Bóveda Documental Familiar
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#ECFCF8] dark:bg-[#C2F4E7]/15 text-[#1B6E5E] dark:text-[#C2F4E7] border border-[#C2F4E7]">
-                Bóveda Encriptada
-              </span>
-            </h3>
-            <p className="text-xs text-slate-600 dark:text-[#D6C8FA]/80">
-              Explorador inteligente de expedientes escolares, salud e identidad familiar
-            </p>
-          </div>
-        </div>
 
-        {/* Botón de Subir Documento */}
-        <button
-          onClick={onOpenUpload}
-          className="px-4 py-2 rounded-xl bg-[#533B87] hover:bg-[#44326E] text-xs text-white font-bold flex items-center gap-2 shadow-md shadow-[#533B87]/25 transition-all hover:scale-105 active:scale-95 cursor-pointer self-start sm:self-auto"
-        >
-          <Plus className="w-4 h-4 text-[#C2F4E7]" />
-          <span>Subir Documento</span>
-        </button>
-      </div>
+          {/* Botón de Subir Documento */}
+          <button
+            onClick={onOpenUpload}
+            className="px-4 py-2 rounded-xl bg-[#533B87] hover:bg-[#44326E] text-xs text-white font-bold flex items-center gap-2 shadow-md shadow-[#533B87]/25 transition-all hover:scale-105 active:scale-95 cursor-pointer self-start sm:self-auto"
+          >
+            <Plus className="w-4 h-4 text-[#C2F4E7]" />
+            <span>Subir Documento</span>
+          </button>
+        </div>
 
       {/* 2. Sistema de Carpetas y Temas Intuitivo (Grid 2x2 en móvil, 4 cols en desktop - SIN DESLIZAR) */}
       <div>
@@ -287,15 +289,17 @@ export const DocumentVault: React.FC<DocumentVaultProps> = ({
           </div>
         </div>
       </div>
+      </div>
 
-      {/* 4. Lista o Bloques de Documentos */}
-      {documents.length === 0 ? (
-        <div className="py-12 flex flex-col items-center justify-center text-center text-slate-500 dark:text-[#EBF1F5]/60 space-y-2 bg-slate-50/50 dark:bg-white/5 rounded-2xl border border-dashed border-slate-200 dark:border-white/10">
-          <FileText className="w-10 h-10 text-slate-300 dark:text-[#D6C8FA]/30" />
-          <p className="text-sm font-bold text-slate-800 dark:text-slate-200">No hay documentos en esta carpeta</p>
-          <p className="text-xs text-slate-500 dark:text-slate-400">Intenta con otra búsqueda o sube un nuevo archivo al expediente</p>
-        </div>
-      ) : viewMode === 'grid' ? (
+      {/* 4. Lista o Bloques de Documentos (Área con Scroll Interno - El resto permanece fijado) */}
+      <div className="flex-1 overflow-y-auto min-h-0 pr-1 space-y-3 scrollbar-thin">
+        {documents.length === 0 ? (
+          <div className="py-12 flex flex-col items-center justify-center text-center text-slate-500 dark:text-[#EBF1F5]/60 space-y-2 bg-slate-50/50 dark:bg-white/5 rounded-2xl border border-dashed border-slate-200 dark:border-white/10">
+            <FileText className="w-10 h-10 text-slate-300 dark:text-[#D6C8FA]/30" />
+            <p className="text-sm font-bold text-slate-800 dark:text-slate-200">No hay documentos en esta carpeta</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400">Intenta con otra búsqueda o sube un nuevo archivo al expediente</p>
+          </div>
+        ) : viewMode === 'grid' ? (
         /* ========================================================================= */
         /* VISTA EN BLOQUE (TARJETAS): Solo título, fuente sin '#' y fecha con botones */
         /* ========================================================================= */
@@ -460,6 +464,7 @@ export const DocumentVault: React.FC<DocumentVaultProps> = ({
           </table>
         </div>
       )}
+      </div>
     </div>
   );
 };
