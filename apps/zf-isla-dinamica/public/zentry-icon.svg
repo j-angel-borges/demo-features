@@ -1,12 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
-  <rect width="100" height="100" rx="28" fill="#080D1A"/>
-  <circle cx="50" cy="50" r="36" stroke="#533B87" stroke-width="4" fill="url(#grad1)"/>
-  <path d="M32 36L68 36L32 64L68 64" stroke="#C2F4E7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="50" cy="50" r="6" fill="#D6C8FA"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <linearGradient id="grad1" x1="20" y1="20" x2="80" y2="80" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#533B87" stop-opacity="0.8"/>
-      <stop offset="1" stop-color="#080D1A" stop-opacity="0.95"/>
+    <radialGradient id="bgPill" cx="40%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#18233C" />
+      <stop offset="60%" stop-color="#0B1120" />
+      <stop offset="100%" stop-color="#040711" />
+    </radialGradient>
+    <linearGradient id="opticsGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#C2F4E7" />
     </linearGradient>
+    <filter id="glowPill" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
   </defs>
+
+  <!-- iOS / padOS Squircle Base -->
+  <rect width="512" height="512" rx="116" fill="url(#bgPill)" />
+  <rect x="12" y="12" width="488" height="488" rx="104" fill="none" stroke="#38BDF8" stroke-width="4" stroke-opacity="0.25" />
+
+  <!-- Dynamic Island Floating Pill Symbol -->
+  <rect x="106" y="140" width="300" height="96" rx="48" fill="#030712" stroke="#D6C8FA" stroke-width="3" stroke-opacity="0.4" />
+  
+  <!-- Left Telemetry Sensor Dot & Audio Wave -->
+  <circle cx="160" cy="188" r="14" fill="#38BDF8" filter="url(#glowPill)" />
+  <circle cx="160" cy="188" r="7" fill="#FFFFFF" />
+
+  <!-- Right Dual Lens PiP Aperture -->
+  <circle cx="340" cy="188" r="16" fill="#1E293B" stroke="#818CF8" stroke-width="3" />
+  <circle cx="340" cy="188" r="7" fill="#C2F4E7" filter="url(#glowPill)" />
+
+  <!-- Center Active Audio Waveform Bars -->
+  <rect x="232" y="174" width="6" height="28" rx="3" fill="#C2F4E7" />
+  <rect x="246" y="164" width="6" height="48" rx="3" fill="#818CF8" />
+  <rect x="260" y="170" width="6" height="36" rx="3" fill="#38BDF8" />
+  <rect x="274" y="178" width="6" height="20" rx="3" fill="#C2F4E7" />
+
+  <!-- Multimodal Ambient Vision Waves (Lower Arch) -->
+  <path d="M140 310 C180 370 332 370 372 310" fill="none" stroke="url(#opticsGlow)" stroke-width="8" stroke-linecap="round" filter="url(#glowPill)" />
+  <path d="M180 345 C210 385 302 385 332 345" fill="none" stroke="#D6C8FA" stroke-width="5" stroke-linecap="round" opacity="0.7" />
+
+  <!-- Circadian Amber/Glacial Horizon Flare -->
+  <circle cx="256" cy="380" r="12" fill="#FBBF24" filter="url(#glowPill)" />
 </svg>

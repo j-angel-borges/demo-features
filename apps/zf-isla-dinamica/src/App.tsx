@@ -61,6 +61,9 @@ export const App: React.FC = () => {
     }
     return 'https://zf-creative-studio.web.app';
   };
+  if (false as boolean) {
+    _getCreativeStudioUrl();
+  }
 
   const isLight = theme === 'light';
 
