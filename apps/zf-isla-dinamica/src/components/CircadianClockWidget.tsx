@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sun, Moon, Sparkles, Clock } from 'lucide-react';
+import { Sun, Sparkles, Clock } from 'lucide-react';
 import { islandTelemetryService } from '../services/islandTelemetryService';
 
 export interface CircadianPhaseInfo {
@@ -129,7 +129,6 @@ export const CircadianClockWidget: React.FC<CircadianClockWidgetProps> = ({
   // Formatted digital time
   const formattedHours = String(hours).padStart(2, '0');
   const formattedMinutes = String(minutes).padStart(2, '0');
-  const formattedSeconds = String(seconds).padStart(2, '0');
 
   // Remaining daylight or rest time calculation
   const remainingTimeStr = useMemo(() => {
@@ -257,36 +256,13 @@ export const CircadianClockWidget: React.FC<CircadianClockWidgetProps> = ({
             </div>
           )}
 
-          {/* Phase Pill Badge */}
-          <div className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-100/90 dark:bg-white/10 text-[10px] font-bold tracking-wide transition-colors">
-            {phaseInfo.isDaytime ? (
-              <Sun className="w-3 h-3 text-amber-500 animate-spin" style={{ animationDuration: '24s' }} />
-            ) : (
-              <Moon className="w-3 h-3 text-[#D6C8FA]" />
-            )}
-            <span
-              className="uppercase tracking-wider font-mono text-[9px]"
-              style={{ color: phaseInfo.color }}
-            >
-              {phaseInfo.title}
-            </span>
-          </div>
-
-          {/* Large High-Contrast Digital Time Display */}
-          <div className="flex items-baseline justify-center font-mono font-black tracking-tight text-slate-900 dark:text-[#EBF1F5] my-1">
-            <span className="text-3xl leading-none">{formattedHours}</span>
-            <span className="text-2xl leading-none text-slate-400 dark:text-slate-500 mx-0.5 animate-pulse">
+          {/* Clean High-Contrast Digital Time Display */}
+          <div className="flex items-center justify-center font-mono font-black tracking-tight text-slate-900 dark:text-[#EBF1F5]">
+            <span className="text-4xl leading-none">{formattedHours}</span>
+            <span className="text-3xl leading-none text-slate-400 dark:text-slate-500 mx-1 animate-pulse">
               :
             </span>
-            <span className="text-3xl leading-none">{formattedMinutes}</span>
-            <span className="text-xs text-slate-400 dark:text-slate-500 ml-1 font-sans font-semibold">
-              {formattedSeconds}
-            </span>
-          </div>
-
-          {/* Natural Light Level Subtitle */}
-          <div className="text-[10px] font-medium text-slate-600 dark:text-slate-400 truncate max-w-[130px]">
-            {phaseInfo.subtitle}
+            <span className="text-4xl leading-none">{formattedMinutes}</span>
           </div>
         </div>
 

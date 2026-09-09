@@ -246,13 +246,15 @@ export const DocumentVault: React.FC<DocumentVaultProps> = ({
         <div className="flex items-center gap-2">
           {/* Campo de Búsqueda */}
           <div className="relative flex-1 md:w-64">
-            <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 transform -translate-y-1/2 pointer-events-none" />
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <Search className="w-3.5 h-3.5 text-slate-400" />
+            </div>
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
               placeholder="Buscar por título o fuente..."
-              className="w-full pl-8.5 pr-3 py-1.5 rounded-xl bg-white dark:bg-[#080D1A]/80 border border-slate-200 dark:border-[#D6C8FA]/20 text-xs text-slate-900 dark:text-[#EBF1F5] placeholder-slate-400 focus:border-[#533B87] dark:focus:border-[#C2F4E7] outline-none transition-all shadow-xs"
+              className="w-full pl-9 pr-3 py-1.5 rounded-xl bg-white dark:bg-[#080D1A]/80 border border-slate-200 dark:border-[#D6C8FA]/20 text-xs text-slate-900 dark:text-[#EBF1F5] placeholder-slate-400 focus:border-[#533B87] dark:focus:border-[#C2F4E7] outline-none transition-all shadow-xs"
             />
           </div>
 

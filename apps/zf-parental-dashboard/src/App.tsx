@@ -109,9 +109,6 @@ export const App: React.FC = () => {
 
   return (
     <div className={`min-h-screen ${theme === 'light' ? 'theme-light text-[var(--text-main)]' : 'theme-dark text-[var(--text-main)] dark'} relative pb-16 transition-colors duration-300 bg-[var(--bg-canvas)]`}>
-      {/* Top Ambient Glow Bar (Mesa de Trabajo 02.B) */}
-      <div className="top-glow-bar" />
-
       {/* Circadian Warmth Overlay */}
       <div id="zentry-calidez-overlay" className={circadianActive ? 'active' : ''} />
 

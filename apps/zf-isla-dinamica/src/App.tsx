@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { DynamicIsland } from './components/DynamicIsland';
 import { CircadianClockWidget } from './components/CircadianClockWidget';
-import { CircadianBiologicalCard } from './components/CircadianBiologicalCard';
-import { EcosystemQuickLinks } from './components/EcosystemQuickLinks';
 import { Radio, Sun, Moon, ShieldAlert, Lock, Palette } from 'lucide-react';
 import { subscribeToEmergencyLock, getEmergencyLock } from '@zentry/shared';
 
@@ -118,8 +116,8 @@ export const App: React.FC = () => {
         </div>
       </header>
 
-      {/* Main OS Canvas: Island at top, Circadian Clock, Biological Card, Quick Links */}
-      <main className="relative z-30 flex-1 flex flex-col items-center justify-start w-full max-w-[430px] mx-auto min-h-0 overflow-y-auto no-scrollbar space-y-3 pt-1 pb-1">
+      {/* Main OS Canvas: Island at top, Circadian Clock */}
+      <main className="relative z-30 flex-1 flex flex-col items-center justify-center w-full max-w-[430px] mx-auto min-h-0 overflow-y-auto no-scrollbar space-y-8 pt-1 pb-2">
         {/* Dynamic Island Morphing Hub (Capsule in Repose or Expanded) */}
         <div className="w-full flex justify-center shrink-0 z-40">
           <DynamicIsland
@@ -129,23 +127,12 @@ export const App: React.FC = () => {
           />
         </div>
 
-        {/* Phase 2: Circadian Symbolic Clock Widget */}
-        <div className="w-full shrink-0 flex justify-center pt-0.5">
+        {/* Circadian Clock Widget */}
+        <div className="w-full shrink-0 flex justify-center pt-2">
           <CircadianClockWidget
             isHighlighted={isCircadianHighlighted}
             onClearHighlight={() => setIsCircadianHighlighted(false)}
           />
-        </div>
-
-        {/* Phase 3: Canvas Support Widgets */}
-        <div className="w-full space-y-2.5 px-1 shrink-0">
-          {/* Biological State Card (ART & Light Cycle) */}
-          <CircadianBiologicalCard
-            onOpenArtBreak={() => setIsCircadianHighlighted(true)}
-          />
-
-          {/* Quick Links Dock (Skinner Box, Z-Art Studio, Parental Dashboard) */}
-          <EcosystemQuickLinks />
         </div>
       </main>
 

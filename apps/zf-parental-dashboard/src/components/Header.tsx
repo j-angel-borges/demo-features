@@ -49,6 +49,15 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'profile', label: 'Ficha', icon: <UserCheck className="w-4 h-4" /> },
   ];
 
+  // Micro-PWA 4 Cross-App Navigation Contract Helper (Z-Art Studio Port 5176)
+  const _getCreativeStudioUrl = () => {
+    if (typeof window !== 'undefined') {
+      const hostname = window.location.hostname;
+      if (hostname === 'localhost' || hostname === '127.0.0.1') return `http://${hostname}:5176`;
+    }
+    return 'https://zf-creative-studio.web.app';
+  };
+
   const isLight = theme === 'light';
 
   return (

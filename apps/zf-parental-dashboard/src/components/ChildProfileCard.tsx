@@ -52,7 +52,7 @@ export const ChildProfileCard: React.FC<ChildProfileCardProps> = ({
   };
 
   return (
-    <div className="glass-panel rounded-3xl p-6 relative overflow-hidden border border-[#D6C8FA]/40 dark:border-[#D6C8FA]/20 flex flex-col justify-between">
+    <div className="glass-panel rounded-3xl p-5 sm:p-6 relative overflow-hidden border border-[#D6C8FA]/25 shadow-xl flex flex-col justify-between">
       {/* Top Header Row */}
       <div className="flex items-start justify-between gap-4">
         {/* Child Avatar & Name */}
