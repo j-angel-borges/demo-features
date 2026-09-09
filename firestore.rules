@@ -17,20 +17,11 @@ service cloud.firestore {
     }
 
     function isValidAppName(app) {
-      return app in ['isla-dinamica', 'skinner-box', 'parent-dashboard', 'creative-studio', 'vibe-coding'];
+      return app in ['isla-dinamica', 'skinner-box', 'parent-dashboard', 'creative-studio'];
     }
 
     function isValidDocCategory(cat) {
       return cat in ['salud', 'identidad', 'educacion', 'legal'];
-    }
-
-    // 0. Infant Vibe Coding Sessions (2-5 años)
-    match /sessions_vibe/{sessionId} {
-      allow read: if true;
-      allow write: if request.resource.data.sessionId is string
-                   && request.resource.data.appName == 'vibe-coding'
-                   && isValidStatus(request.resource.data.status)
-                   && request.resource.data.startTime is number;
     }
 
     // 1. Skinner Box Session Records

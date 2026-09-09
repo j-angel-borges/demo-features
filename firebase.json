@@ -173,7 +173,7 @@
       ]
     },
     {
-      "target": "z-bio-morph",
+      "target": "vibe-coding",
       "public": "apps/vibe-coding/dist",
       "ignore": [
         "firebase.json",
@@ -199,12 +199,8 @@
               "value": "nosniff"
             },
             {
-              "key": "X-Frame-Options",
-              "value": "SAMEORIGIN"
-            },
-            {
               "key": "Permissions-Policy",
-              "value": "microphone=*, accelerometer=*, gyroscope=*"
+              "value": "microphone=*"
             }
           ]
         },

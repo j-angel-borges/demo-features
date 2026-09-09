@@ -14,7 +14,6 @@
     "dev:skinner": "npm run dev -w apps/zf-skinner-box",
     "dev:parent": "npm run dev -w apps/zf-parental-dashboard",
     "dev:creative": "npm run dev -w apps/zf-creative-studio",
-    "dev:vibe": "npm run dev -w apps/vibe-coding",
     "build": "npm run build --workspaces --if-present",
     "build:shared": "npm run build -w packages/shared",
     "build:island": "npm run build -w apps/zf-isla-dinamica",
@@ -22,6 +21,7 @@
     "build:parent": "npm run build -w apps/zf-parental-dashboard",
     "build:creative": "npm run build -w apps/zf-creative-studio",
     "build:vibe": "npm run build -w apps/vibe-coding",
+    "dev:vibe": "npm run dev -w apps/vibe-coding",
     "test": "node --import tsx tests/test-runner.ts",
     "test:runner": "npx tsx tests/test-runner.ts",
     "typecheck": "tsc -b --dry"

@@ -269,34 +269,3 @@ export interface CreativeCreationRecord {
   syncedToFirestore: boolean;
 }
 
-// ============================================================================
-// 6. FIRESTORE COLLECTION: sessions_vibe (Vibe Coding Pediátrico 2-5 años)
-// ============================================================================
-
-export interface VibeAcousticClimateData {
-  rmsDb: number;
-  spectralFlatness: number;
-  isCalm: boolean;
-  sampleCount: number;
-  lastUpdated: number;
-}
-
-export interface VibeSessionRecord {
-  sessionId: string;
-  childId: string;
-  appName: 'vibe-coding';
-  targetCohort: '2-5';
-  deviceType: 'tablet' | 'smartphone';
-  status: 'active' | 'completed';
-  startTime: number;
-  endTime?: number;
-  lastUpdated: number;
-  totalEntitiesCreated: number;
-  rapidTapBurstCount: number;
-  multiPointerCount: number;
-  palmContactCount: number;
-  acousticClimate: VibeAcousticClimateData;
-  explorationScore: number; // 0-100%
-  activeFolderCategories: string[];
-}
-

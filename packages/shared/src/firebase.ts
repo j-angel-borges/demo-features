@@ -27,7 +27,6 @@ import type {
   SkinnerLeverEvent,
   SkinnerSessionReportRecord,
   CreativeCreationRecord,
-  VibeSessionRecord,
 } from './types.js';
 
 // ============================================================================
@@ -1369,67 +1368,6 @@ export function subscribeToCreativeCreations(
 
     return unsubscribeCloud;
   } catch (err) {
-    return () => {};
-  }
-}
-
-// ============================================================================
-// 12. INFANT VIBE CODING SESSIONS: sessions_vibe
-// ============================================================================
-
-export async function saveVibeSession(record: VibeSessionRecord): Promise<void> {
-  if (typeof localStorage !== 'undefined') {
-    try {
-      localStorage.setItem('zentry_latest_vibe_session', JSON.stringify(record));
-    } catch {}
-  }
-
-  const db = getFirestoreDb();
-  if (!db) return;
-
-  try {
-    const sessionRef = doc(db, 'sessions_vibe', record.sessionId);
-    await setDoc(sessionRef, record, { merge: true });
-  } catch (err) {
-    console.warn('[Firestore] Error saving vibe session:', err);
-  }
-}
-
-export function subscribeToVibeSessions(
-  callback: (sessions: VibeSessionRecord[]) => void
-): Unsubscribe {
-  const db = getFirestoreDb();
-  if (!db) {
-    if (typeof localStorage !== 'undefined') {
-      try {
-        const raw = localStorage.getItem('zentry_latest_vibe_session');
-        if (raw) callback([JSON.parse(raw)]);
-      } catch {}
-    }
-    return () => {};
-  }
-
-  try {
-    const q = query(
-      collection(db, 'sessions_vibe'),
-      orderBy('lastUpdated', 'desc'),
-      limit(20)
-    );
-
-    return onSnapshot(
-      q,
-      (snapshot) => {
-        const list: VibeSessionRecord[] = [];
-        snapshot.forEach((d) => list.push(d.data() as VibeSessionRecord));
-        if (list.length > 0) {
-          callback(list);
-        }
-      },
-      (err) => {
-        console.warn('[Firestore] Vibe sessions listener disconnected:', err);
-      }
-    );
-  } catch {
     return () => {};
   }
 }
