@@ -63,7 +63,7 @@ export const ChildProfileCard: React.FC<ChildProfileCardProps> = ({
                 {profile.avatarUrl ? (
                   <img src={profile.avatarUrl} alt={profile.name} className="w-full h-full object-cover" />
                 ) : (
-                  <span className="text-xl font-bold font-mono text-[#533B87] dark:text-[#D6C8FA]">MQ</span>
+                  <span className="text-xl font-bold font-mono text-[#533B87] dark:text-[#D6C8FA]">MZ</span>
                 )}
               </div>
             </div>

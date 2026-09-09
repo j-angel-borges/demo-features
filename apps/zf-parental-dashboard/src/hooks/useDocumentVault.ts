@@ -30,9 +30,9 @@ export const SEEDED_VAULT_DOCUMENTS: DocumentItem[] = [
   },
   {
     id: 'doc_identidad_01',
-    title: 'DNI Menor de Edad - Mateo Quispe',
+    title: 'DNI Menor de Edad - Mateo Zegarra',
     category: 'identidad',
-    fileUrl: 'https://storage.googleapis.com/quarz-group-vault/dni_mateo_quispe.pdf',
+    fileUrl: 'https://storage.googleapis.com/quarz-group-vault/dni_mateo_zegarra.pdf',
     fileType: 'image/jpeg',
     sizeBytes: 2097152, // 2.0 MB
     uploadDate: Date.now() - 86400000 * 45,

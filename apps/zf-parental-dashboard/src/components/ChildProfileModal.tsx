@@ -43,7 +43,7 @@ export const ChildProfileModal: React.FC<ChildProfileModalProps> = ({
             </div>
             <div>
               <h3 className="text-base font-bold text-slate-900 dark:text-[#EBF1F5]">Configurar Perfil & Restricciones</h3>
-              <p className="text-xs text-slate-600 dark:text-slate-300">Mateo Quispe Mendoza • 10 años</p>
+              <p className="text-xs text-slate-600 dark:text-slate-300">Mateo Zegarra Mendoza • 10 años</p>
             </div>
           </div>
 

@@ -45,7 +45,6 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'overview', label: 'General', icon: <LayoutDashboard className="w-4 h-4" /> },
     { id: 'vault', label: 'Bóveda', icon: <FolderLock className="w-4 h-4" /> },
     { id: 'skinner', label: 'Observador', icon: <Gamepad2 className="w-4 h-4" /> },
-    { id: 'creative', label: 'Z-Art', icon: <Palette className="w-4 h-4 text-pink-500" /> },
     { id: 'profile', label: 'Ficha', icon: <UserCheck className="w-4 h-4" /> },
   ];
 

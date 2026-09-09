@@ -63,7 +63,7 @@ export const App: React.FC = () => {
 
   const [childProfile, setChildProfile] = useState<ChildProfileState>({
     id: 'child_mateo_01',
-    name: 'Mateo Quispe Mendoza',
+    name: 'Mateo Zegarra Mendoza',
     age: 10,
     grade: '5to Primaria',
     school: 'Colegio San Agustín',
