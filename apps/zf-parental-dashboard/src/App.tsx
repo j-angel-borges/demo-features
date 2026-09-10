@@ -108,7 +108,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className={`min-h-screen ${theme === 'light' ? 'theme-light text-[var(--text-main)]' : 'theme-dark text-[var(--text-main)] dark'} relative pb-16 transition-colors duration-300 bg-[var(--bg-canvas)]`}>
+    <div className={`min-h-screen lg:h-screen lg:overflow-hidden ${theme === 'light' ? 'theme-light text-[var(--text-main)]' : 'theme-dark text-[var(--text-main)] dark'} relative transition-colors duration-300 bg-[var(--bg-canvas)] flex flex-col`}>
       {/* Circadian Warmth Overlay */}
       <div id="zentry-calidez-overlay" className={circadianActive ? 'active' : ''} />
 
@@ -127,11 +127,11 @@ export const App: React.FC = () => {
         onToggleTheme={toggleTheme}
       />
 
-      {/* Main Container - padOS Fixed Two-Column Layout */}
-      <main className="max-w-7xl mx-auto px-4 lg:px-6 pt-4">
+      {/* Main Container - padOS Fixed Two-Column Layout with Pinned Margin */}
+      <main className={`max-w-7xl w-full mx-auto px-4 lg:px-6 pt-4 pb-4 flex-1 min-h-0 flex flex-col ${activeTab === 'overview' || activeTab === 'vault' ? 'overflow-hidden' : 'overflow-y-auto'}`}>
         {/* VIEW 1: Overview / All-in-One Live Cockpit (padOS Split-Screen) */}
         {activeTab === 'overview' && (
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start flex-1 min-h-0 h-full">
             {/* Left Card (Mateo Profile & Controls) */}
             <div className="lg:col-span-4 flex flex-col">
               <ChildProfileCard
@@ -144,7 +144,7 @@ export const App: React.FC = () => {
             </div>
 
             {/* Right Pane: Document Vault / Activities */}
-            <div className="lg:col-span-8 flex flex-col">
+            <div className="lg:col-span-8 flex flex-col h-full min-h-0 self-stretch">
               <DocumentVault
                 documents={documents}
                 allDocuments={allDocuments}
@@ -177,7 +177,7 @@ export const App: React.FC = () => {
 
         {/* VIEW 4: Dedicated Family Document Vault */}
         {activeTab === 'vault' && (
-          <div>
+          <div className="h-full flex-1 min-h-0 flex flex-col">
             <DocumentVault
               documents={documents}
               allDocuments={allDocuments}

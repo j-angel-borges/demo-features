@@ -60,7 +60,7 @@ export const Header: React.FC<HeaderProps> = ({
   const isLight = theme === 'light';
 
   return (
-    <header className="sticky top-0 z-40 w-full glass-panel border-b border-[#D6C8FA]/30 dark:border-[#D6C8FA]/15 px-4 lg:px-6 py-2.5 transition-colors">
+    <header className="sticky top-0 z-40 w-full glass-panel border-b border-[#D6C8FA]/30 dark:border-[#D6C8FA]/15 px-4 lg:px-6 py-2.5 transition-colors shrink-0">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
         {/* Brand Minimalist Icon + Status Indicator */}
         <div className="flex items-center gap-3">

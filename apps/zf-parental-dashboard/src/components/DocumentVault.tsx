@@ -125,7 +125,7 @@ export const DocumentVault: React.FC<DocumentVaultProps> = ({
   };
 
   return (
-    <div className="glass-panel rounded-3xl p-5 sm:p-6 border border-[#D6C8FA]/25 shadow-xl flex flex-col gap-4 lg:h-[calc(100vh-5.5rem)] overflow-hidden">
+    <div className="glass-panel rounded-3xl p-5 sm:p-6 border border-[#D6C8FA]/25 shadow-xl flex flex-col gap-4 h-full overflow-hidden">
       {/* Pinned Top Container: Header, Folders, Breadcrumbs & Search */}
       <div className="shrink-0 flex flex-col gap-4">
         {/* 1. Header Principal */}
@@ -292,7 +292,7 @@ export const DocumentVault: React.FC<DocumentVaultProps> = ({
       </div>
 
       {/* 4. Lista o Bloques de Documentos (Área con Scroll Interno - El resto permanece fijado) */}
-      <div className="flex-1 overflow-y-auto min-h-0 pr-1 space-y-3 scrollbar-thin">
+      <div className="flex-1 overflow-y-auto overscroll-y-contain min-h-0 pr-1 space-y-3 scrollbar-thin">
         {documents.length === 0 ? (
           <div className="py-12 flex flex-col items-center justify-center text-center text-slate-500 dark:text-[#EBF1F5]/60 space-y-2 bg-slate-50/50 dark:bg-white/5 rounded-2xl border border-dashed border-slate-200 dark:border-white/10">
             <FileText className="w-10 h-10 text-slate-300 dark:text-[#D6C8FA]/30" />
